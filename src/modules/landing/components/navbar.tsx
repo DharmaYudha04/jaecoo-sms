@@ -4,130 +4,85 @@ export default function Navbar() {
   return (
     <header
       style={{
-        position: "sticky",
+        position: "fixed",
         top: 0,
-        zIndex: 20,
-        padding: "20px 28px 0 28px",
+        left: 0,
+        width: "100%",
+        zIndex: 1000,
+        backgroundColor: "rgba(245, 245, 245, 0.92)",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
+        padding: "28px 36px",
+        boxSizing: "border-box",
       }}
     >
       <div
         style={{
-          maxWidth: "1280px",
+          maxWidth: "1360px",
           margin: "0 auto",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "14px 18px",
-          borderRadius: "24px",
-          background: "rgba(255, 255, 255, 0.50)",
-          backdropFilter: "blur(22px)",
-          WebkitBackdropFilter: "blur(22px)",
-          border: "1px solid rgba(255, 255, 255, 0.55)",
-          boxShadow: "0 10px 30px rgba(15, 23, 42, 0.08)",
         }}
       >
-        <Link
-          to="/"
+        <div
           style={{
             display: "flex",
             alignItems: "center",
             gap: "14px",
-            textDecoration: "none",
-            color: "#111827",
           }}
         >
-          <div
+          <img
+            src="/assets/logo-jaecoo-black.png"
+            alt="JAECOO"
             style={{
-              width: 44,
-              height: 44,
-              borderRadius: 14,
-              background: "rgba(255,255,255,0.65)",
-              border: "1px solid rgba(255,255,255,0.7)",
-              display: "grid",
-              placeItems: "center",
-              overflow: "hidden",
-              flexShrink: 0,
+              height: "30px",
+              width: "auto",
+              objectFit: "contain",
+              display: "block",
+            }}
+          />
+          <span
+            style={{
+              fontFamily: "Helvetica, Arial, sans-serif",
+              fontSize: "22px",
+              color: "#111111",
+              fontWeight: 400,
             }}
           >
-            <img
-              src="/assets/logo-jaecoo.svg"
-              alt="JAECOO Logo"
-              style={{
-                width: 28,
-                height: 28,
-                objectFit: "contain",
-              }}
-            />
-          </div>
+            | Yogyakarta
+          </span>
+        </div>
 
-          <div style={{ lineHeight: 1.1 }}>
-            <div
-              style={{
-                fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-                fontSize: 18,
-                fontWeight: 700,
-                letterSpacing: "-0.03em",
-              }}
-            >
-              JAECOO
-            </div>
-            <div
-              style={{
-                fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-                fontSize: 12,
-                color: "#6B7280",
-                marginTop: 2,
-              }}
-            >
-              Service Management System
-            </div>
-          </div>
-        </Link>
-
-        <nav
+        <div
           style={{
             display: "flex",
+            gap: "14px",
             alignItems: "center",
-            gap: 10,
           }}
         >
+
           <Link
             to="/login"
             style={{
+              width: "145px",
+              height: "42px",
+              borderRadius: "12px",
+              border: "2px solid #5d82e8",
+              backgroundColor: "#5d82e8",
+              color: "#ffffff",
               textDecoration: "none",
-              padding: "10px 18px",
-              borderRadius: 999,
-              color: "#111827",
-              fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-              fontSize: 14,
-              fontWeight: 500,
-              border: "1px solid rgba(17, 24, 39, 0.08)",
-              background: "rgba(255,255,255,0.38)",
-              backdropFilter: "blur(18px)",
-              WebkitBackdropFilter: "blur(18px)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontFamily: "Helvetica, Arial, sans-serif",
+              fontSize: "18px",
+              fontWeight: 700,
             }}
           >
             Masuk
           </Link>
-
-          <Link
-            to="/login"
-            style={{
-              textDecoration: "none",
-              padding: "10px 18px",
-              borderRadius: 999,
-              color: "#FFFFFF",
-              fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-              fontSize: 14,
-              fontWeight: 600,
-              background:
-                "linear-gradient(135deg, rgba(94,126,220,1) 0%, rgba(76,110,214,1) 100%)",
-              boxShadow: "0 10px 20px rgba(76, 110, 214, 0.25)",
-            }}
-          >
-            Login Sistem
-          </Link>
-        </nav>
+        </div>
       </div>
     </header>
   );

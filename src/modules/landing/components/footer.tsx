@@ -1,93 +1,107 @@
 export default function Footer() {
   return (
     <footer
-      id="tentang"
       style={{
-        padding: '0 28px 32px 28px',
+        position: "fixed",
+        left: 0,
+        bottom: 0,
+        width: "100%",
+        zIndex: 1000,
+        backgroundColor: "rgba(5, 8, 15, 0.96)",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
+        color: "#ffffff",
+        padding: "24px 46px 22px 46px",
+        boxSizing: "border-box",
       }}
     >
       <div
         style={{
-          maxWidth: '1280px',
-          margin: '0 auto',
-          borderRadius: 30,
-          padding: '24px 26px',
-          background: 'rgba(255,255,255,0.45)',
-          backdropFilter: 'blur(22px)',
-          WebkitBackdropFilter: 'blur(22px)',
-          border: '1px solid rgba(255,255,255,0.62)',
-          boxShadow: "0 20px 50px rgba(15, 23, 42, 0.06)",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "flex-start",
-          gap: 24,
-          flexWrap: "wrap",
+          maxWidth: "1360px",
+          margin: "0 auto",
+          display: "grid",
+          gridTemplateColumns: "1.2fr 1fr 1fr",
+          alignItems: "center",
         }}
       >
-        <div style={{ maxWidth: 640 }}>
-          <div
-            style={{
-              fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-              fontSize: 18,
-              fontWeight: 700,
-              color: "#111827",
-              letterSpacing: "-0.03em",
-              marginBottom: 10,
-            }}
-          >
-            JAECOO Service Management System
-          </div>
-
+        <div>
           <p
             style={{
               margin: 0,
-              fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-              fontSize: 15,
-              lineHeight: 1.7,
-              color: "#4B5563",
+              maxWidth: "520px",
+              fontFamily: "Helvetica, Arial, sans-serif",
+              fontSize: "18px",
+              lineHeight: 1.35,
+              color: "#e7e7e7",
             }}
           >
-            Sistem ini dirancang untuk membantu proses operasional servis
-            kendaraan menjadi lebih tertata, mudah dipantau, dan nyaman
-            digunakan oleh tim frontline, mekanik, manajer, maupun admin.
+            JAECOO Service Management System adalah prototipe sistem manajemen
+            internal yang sedang dikerjakan oleh mahasiswa magang Program Studi
+            Informatika UPN “Veteran” Yogyakarta pada bulan Maret tahun 2026.
+            <br />
+            Sistem ini masih dalam tahap pengembangan, EXPECT BUG.
           </p>
         </div>
 
         <div
           style={{
             display: "flex",
-            alignItems: "center",
-            gap: 12,
+            justifyContent: "center",
           }}
         >
-          <div
+          <img
+            src="/assets/logo-jaecoo-white.png"
+            alt="JAECOO"
             style={{
-              width: 46,
-              height: 46,
-              borderRadius: 14,
-              background: "rgba(255,255,255,0.72)",
-              border: "1px solid rgba(255,255,255,0.75)",
-              display: "grid",
-              placeItems: "center",
-              overflow: "hidden",
+              width: "200px",
+              height: "auto",
+              objectFit: "contain",
+              display: "block",
             }}
-          >
-            <img
-              src="/assets/logo-jaecoo.svg"
-              alt="JAECOO Logo"
-              style={{ width: 28, height: 28, objectFit: "contain" }}
-            />
-          </div>
+          />
+        </div>
 
-          <div
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "26px",
+            alignItems: "center",
+          }}
+        >
+          <a
+            href="#"
             style={{
-              fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-              fontSize: 14,
-              color: "#6B7280",
+              color: "#ffffff",
+              fontSize: "34px",
+              textDecoration: "none",
+              lineHeight: 1,
             }}
           >
-            © 2026 JAECOO Yogyakarta
-          </div>
+            ○
+          </a>
+          <a
+            href="#"
+            style={{
+              color: "#ffffff",
+              fontSize: "34px",
+              textDecoration: "none",
+              lineHeight: 1,
+            }}
+          >
+            f
+          </a>
+          <a
+            href="#"
+            style={{
+              color: "#ffffff",
+              fontSize: "34px",
+              textDecoration: "none",
+              lineHeight: 1,
+            }}
+          >
+            ♪
+          </a>
         </div>
       </div>
     </footer>

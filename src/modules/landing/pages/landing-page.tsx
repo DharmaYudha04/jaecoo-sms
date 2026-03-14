@@ -1,19 +1,23 @@
-import HeroSection from "../components/hero-section"
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
+import Navbar from "../components/navbar";
+import HeroSection from "../components/hero-section";
+import Footer from "../components/footer";
 
 export default function LandingPage() {
   return (
-    <div
+    <main
       style={{
         minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column"
+        width: "100%",
+        backgroundColor: "#f5f5f5",
+        fontFamily: "Helvetica, Arial, sans-serif",
+        paddingTop: "96px",
+        paddingBottom: "170px",
+        boxSizing: "border-box",
       }}
     >
       <Navbar />
       <HeroSection />
       <Footer />
-    </div>
-  )
+    </main>
+  );
 }

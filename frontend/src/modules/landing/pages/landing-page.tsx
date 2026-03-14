@@ -4,17 +4,7 @@ import Footer from "../components/footer";
 
 export default function LandingPage() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        width: "100%",
-        backgroundColor: "#f5f5f5",
-        fontFamily: "Helvetica, Arial, sans-serif",
-        paddingTop: "96px",
-        paddingBottom: "170px",
-        boxSizing: "border-box",
-      }}
-    >
+    <main className="landing-page fade-in">
       <Navbar />
       <HeroSection />
       <Footer />
