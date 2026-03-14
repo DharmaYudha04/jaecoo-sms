@@ -1,8 +1,10 @@
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -11,6 +13,8 @@ export default function LoginForm() {
       email,
       password,
     });
+
+    navigate('/dashboard/admin');
   };
 
   return (
